@@ -1,0 +1,22 @@
+(function () {
+    // Lấy tất cả các input radio và checkbox đã được chọn
+    const checkedInputs = document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked');
+
+    // Trích xuất ID của từng input
+    const selectedIds = Array.from(checkedInputs)
+        .map(el => el.id)
+        .filter(id => id); // Bỏ qua nếu không có ID
+
+    // Ghép lại thành chuỗi phân cách bằng dấu phẩy
+    const content = selectedIds.join(',');
+
+    // Tạo file .txt và tải xuống
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'selected_answer_ids.txt';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+})();

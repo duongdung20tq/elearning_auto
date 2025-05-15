@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Submit</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 10px;
+      width: 200px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Auto Submit</h3>
+  <button id="runScript">Bắt đầu tự động chọn</button>
+  <script src="popup.js"></script>
+</body>
+</html>
