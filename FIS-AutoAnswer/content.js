@@ -32,7 +32,9 @@ async function autoClickAnswers() {
 
     // 3.1 Tải file đáp án từ GitHub
     async function loadAnswersFromDrive() {
-        const githubFileUrl = 'https://raw.githubusercontent.com/sonnc/FIS-Elearning/main/dapan.txt';
+       
+		const githubFileUrl = 'https://raw.githubusercontent.com/duongdung20tq/elearning_auto/refs/heads/main/dapan.txt';
+
         try {
             createNotification(`Đang đọc dữ liệu đáp án, vui lòng chờ...`, 1000);
             const response = await fetch(githubFileUrl);
